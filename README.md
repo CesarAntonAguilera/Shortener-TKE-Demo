@@ -126,7 +126,7 @@ Swagger may show a *"Failed to fetch"* error for redirects due to CORS restricti
 The frontend uses an environment file to define the backend API URL:
 
 ```ts
-apiBaseUrl: https://localhost:7053
+apiBaseUrl: https://localhost:7053 //UPDATE THE PORT NUMBER IF NECESARY IN src\environments\environment.ts
 ```
 
 ---
@@ -233,6 +233,8 @@ The application will be available at:
 ```
 http://localhost:4200
 ```
+
+> **Note:** Remember to define the correct port in src\environments\environment.ts frontend file.
 
 ---
 
