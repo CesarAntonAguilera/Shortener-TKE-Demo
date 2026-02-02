@@ -1,0 +1,90 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(760px, 100%);
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+}
+
+.subtitle {
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+.label {
+  display: block;
+  margin: 18px 0 6px;
+  font-weight: 600;
+}
+
+.input {
+  width: 80%;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  outline: none;
+  margin-right: 5px;
+}
+
+.btn {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  margin-top: 0;
+}
+
+.error {
+  margin-top: 12px;
+  color: #b00020;
+}
+
+.result {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.k {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.v {
+  word-break: break-all;
+}
+
+.small {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.muted {
+  opacity: 0.8;
+}

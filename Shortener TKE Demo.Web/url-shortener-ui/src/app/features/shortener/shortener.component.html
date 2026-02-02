@@ -1,0 +1,54 @@
+<app-fullscreen-loader
+  [visible]="loading"
+  text="Generando URL corta..."
+></app-fullscreen-loader>
+
+<div class="page">
+  <div class="card">
+    <h1>URL Shortener</h1>
+    <p class="subtitle">
+      Paste a long URL and generates a short one that will redirect you to it.
+    </p>
+
+    <label class="label">Long URL</label>
+    <input
+      class="input"
+      [(ngModel)]="longUrl"
+      placeholder="https://example.com/very/long/url"
+    />
+
+    <button
+      type="button"
+      class="btn"
+      (click)="shorten()"
+      [disabled]="loading || !longUrl.trim()"
+    >
+      {{ loading ? 'Generating...' : 'Shorten' }}
+    </button>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <div class="result" *ngIf="result">
+      <div class="row">
+        <div class="col">
+          <div class="k">Short URL</div>
+          <a class="v" [href]="result.shortUrl" target="_blank" rel="noopener">
+            {{ result.shortUrl }}
+          </a>
+        </div>
+        <button
+          type="button"
+          class="btn secondary"
+          (click)="copy(result.shortUrl)"
+        >
+          Copy
+        </button>
+      </div>
+
+      <div class="small">
+        <div><b>Code:</b> {{ result.shortCode }}</div>
+        <div class="muted"><b>Original:</b> {{ result.longUrl }}</div>
+      </div>
+    </div>
+  </div>
+</div>
