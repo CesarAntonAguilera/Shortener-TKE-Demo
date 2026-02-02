@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://localhost:44395',
+  apiBaseUrl: 'https://localhost:7053', // Update backend port if necessary
 };
