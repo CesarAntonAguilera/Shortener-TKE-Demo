@@ -126,7 +126,7 @@ Swagger may show a *"Failed to fetch"* error for redirects due to CORS restricti
 The frontend uses an environment file to define the backend API URL:
 
 ```ts
-apiBaseUrl: https://localhost:44395
+apiBaseUrl: https://localhost:7053
 ```
 
 ---
@@ -153,7 +153,7 @@ POST /api/shorten
 {
   "longUrl": "https://example.com/some/very/long/url",
   "shortCode": "Ab3Kx9",
-  "shortUrl": "https://localhost:44395/Ab3Kx9"
+  "shortUrl": "https://localhost:7053/Ab3Kx9"
 }
 ```
 
@@ -211,10 +211,11 @@ dotnet run
 Swagger will be available at:
 
 ```
-https://localhost:44395/swagger
+https://localhost:7053/swagger
 ```
 
 > **Note:** On first run, you may need to accept the development HTTPS certificate in your browser.
+
 > **Note:** Redirection responses do not work correctly in Swagger due to CORS restrictions.
 
 ---
@@ -237,7 +238,7 @@ http://localhost:4200
 
 ## Assumptions
 
-* Short URLs point directly to the backend (`https://localhost:44395/{code}`)
+* Short URLs point directly to the backend (`https://localhost:7053/{code}`)
 * All data is stored in memory and will be lost when the backend restarts
 * Only `http` and `https` URLs are accepted
 * The same long URL always returns the same short code
