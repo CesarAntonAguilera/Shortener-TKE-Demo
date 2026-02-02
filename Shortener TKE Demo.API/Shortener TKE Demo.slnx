@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Shortener TKE Demo/Shortener TKE Demo.csproj" />
+  <Project Path="Shortener_TKE_Demo.Api.Tests/Shortener_TKE_Demo.Api.Tests.csproj" Id="24b5538d-e341-4bc6-a40e-68952d156bec" />
+</Solution>
